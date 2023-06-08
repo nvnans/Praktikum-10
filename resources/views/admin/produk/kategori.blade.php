@@ -26,52 +26,24 @@
             <table id="datatablesSimple">
                 <thead>
                     <tr>
-                        <th>Nomor</th>
-                        <th>Kode</th>
+                        <th>No</th>
                         <th>Nama</th>
-                        <th>Harga Jual</th>
-                        <th>Harga Beli</th>
-                        <th>Stok</th>
-                        <th>Minimal Stok</th>
-                        <th>Deskripsi</th>
-                        <th>Kategori Produk</th>
-                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tfoot>
                     <tr>
-                        <th>Nomor</th>
-                        <th>Kode</th>
+                        <th>No</th>
                         <th>Nama</th>
-                        <th>Harga Jual</th>
-                        <th>Harga Beli</th>
-                        <th>Stok</th>
-                        <th>Minimal Stok</th>
-                        <th>Deskripsi</th>
-                        <th>Kategori Produk</th>
-                        <th>Aksi</th>
                     </tr>
                 </tfoot>
                 <tbody>
                     @php
                         $no = 1;
                     @endphp
-                    @foreach ($produk as $p)
+                    @foreach ($kategoriproduk as $kp)
                         <tr>
                             <td>{{ $no }}</td>
-                            <td>{{ $p->kode }}</td>
-                            <td>{{ $p->nama }}</td>
-                            <td>{{ $p->harga_jual }}</td>
-                            <td>{{ $p->harga_beli }}</td>
-                            <td>{{ $p->stok }}</td>
-                            <td>{{ $p->min_stok }}</td>
-                            <td>{{ $p->deskripsi }}</td>
-                            <td>{{ $p->nama_kategori }}</td>
-                            <td>
-                                <a href="{{ url('produk/edit/' . $p->id) }}" class="btn btn-warning">Edit</a>
-                                <a href="{{ url('produk/delete/' . $p->id) }}" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus produk?')">Delete</a>
-                            </td>
-                        </tr>
+                            <td>{{ $kp->nama }}</td>
                         @php
                             $no++; 
                         @endphp

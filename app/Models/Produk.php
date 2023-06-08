@@ -12,6 +12,9 @@ class Produk extends Model
     //hubungkan dengan tabel produk
     protected $table = 'produk';
 
+    //matiin timestamps
+    public $timestamps = false;
+
     //tentukan kolom yang bisa diisi
     protected $fillable = [
         'kode', 'nama', 'harga_jual', 'harga_beli', 'stok', 'min_stok', 'deskripsi', 'kategori_produk_id',
